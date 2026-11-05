@@ -263,6 +263,15 @@ h2 em{font-style:italic;color:var(--accent)}
 
     <div class="grid">
       <article class="proj wide">
+        <div class="proj-top"><p class="kicker">Forecasting · Public health data</p><span class="go live"><span class="dot" aria-hidden="true"></span>Live · updated nightly</span></div>
+        <h3>DrugSupply Watch</h3>
+        <p>An early-warning watchlist for new US drug shortages, built only from public FDA and Medicaid data. FDA doesn't publish its shortage history, so I rebuilt 12 years of it from about 460 Internet Archive captures of FDA's own page, keyed every drug to a stable ingredient, form and route, and tested the model year by year using only what was public at the time. Each week's predictions are frozen in public before the outcomes are known.</p>
+        <div class="pills"><span class="pill">Top-100 list flags <b>1 in 4</b> new shortages a month early, vs <b>1 in 30</b> for random</span><span class="pill"><b>3,393</b> drug families tracked</span><span class="pill">Runs nightly for <b>$0</b></span></div>
+        <p class="stackline">Python · logistic regression with exact per-drug reasons · walk-forward backtest · GitHub Actions · solo project</p>
+        <div class="links"><a class="btn primary sm" href="https://anoopibrampur.github.io/drugsupply-watch/" target="_blank" rel="noopener">Open the watchlist ↗</a><a class="btn line-btn sm" href="https://github.com/AnoopIbrampur/drugsupply-watch/blob/main/docs/case_study.md" target="_blank" rel="noopener">Case study</a><a class="btn line-btn sm" href="https://github.com/AnoopIbrampur/drugsupply-watch" target="_blank" rel="noopener">Code</a></div>
+      </article>
+
+      <article class="proj wide">
         <div class="proj-top"><p class="kicker">Capstone · Optimization + ML</p><span class="go live"><span class="dot" aria-hidden="true"></span>Live</span></div>
         <h3>StudyMatch</h3>
         <p>Places Penn State students into study groups of 4–5 from a short survey. A Gaussian mixture model finds study-style archetypes, then an integer program solved with OR-Tools CP-SAT assigns every student so that compatibility inside each group is as high as possible.</p>
@@ -444,7 +453,7 @@ const OUT=[
   '  <span class="k">"school"</span>:  <span class="s">"Penn State"</span>,',
   '  <span class="k">"gpa"</span>:     <span class="s">3.84</span>,',
   '  <span class="k">"focus"</span>:   [<span class="s">"data engineering"</span>, <span class="s">"ML evaluation"</span>, <span class="s">"LLM systems"</span>],',
-  '  <span class="k">"shipped"</span>: [<span class="s">"Airflow → Snowflake ETL"</span>, <span class="s">"CP-SAT group matching"</span>, <span class="s">"RAG w/ eval harness"</span>],',
+  '  <span class="k">"shipped"</span>: [<span class="s">"drug shortage early warning"</span>, <span class="s">"Airflow → Snowflake ETL"</span>, <span class="s">"RAG w/ eval harness"</span>],',
   '  <span class="k">"status"</span>:  <span class="s">"open to new-grad roles, startups especially"</span>',
   '}',
   '<span class="d">Process finished with exit code 0 · 0.42s</span>'
