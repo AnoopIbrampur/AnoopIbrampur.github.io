@@ -127,6 +127,9 @@ a.proj:hover .go{color:var(--accent)}
 .flow li span{font-size:.84rem;color:var(--muted);line-height:1.4}
 @media (max-width:720px){.flow{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:6px}}
 
+.links{display:flex;gap:8px;flex-wrap:wrap;margin-top:2px}
+.btn.sm{padding:7px 14px;font-size:.84rem}
+.go.live{display:inline-flex;align-items:center;gap:6px;color:var(--good)}
 /* More builds list */
 .more{margin-top:56px}
 .more .kicker{margin-bottom:8px}
@@ -279,13 +282,14 @@ h2 em{font-style:italic;color:var(--accent)}
         <p class="stackline">Fetch.ai uAgents · Next.js · SpacetimeDB · Stripe test mode · team of 4</p>
       </a>
 
-      <a class="proj" href="https://github.com/AnoopIbrampur/trendcatcher" target="_blank" rel="noopener">
-        <div class="proj-top"><p class="kicker">ML · Trend detection</p><span class="go">Repo ↗</span></div>
+      <article class="proj">
+        <div class="proj-top"><p class="kicker">ML · Trend detection</p><span class="go live"><span class="dot" aria-hidden="true"></span>Live</span></div>
         <h3>Trend Catcher</h3>
         <p>Scores rising topics across TikTok, YouTube, Google Trends and Wikipedia early enough for creators to act, then writes brand-safety checks and video briefs with a local LLM.</p>
         <div class="pills"><span class="pill"><b>75.6%</b> vs <b>54.4%</b> baseline, top-20 precision</span><span class="pill">Won <b>40 of 41</b> backtest days</span></div>
         <p class="stackline">Python · logistic regression · embeddings · Ollama · FastAPI</p>
-      </a>
+        <div class="links"><a class="btn primary sm" href="https://anoopibrampur.github.io/trendcatcher/" target="_blank" rel="noopener">Open live demo ↗</a><a class="btn line-btn sm" href="https://github.com/AnoopIbrampur/trendcatcher" target="_blank" rel="noopener">Code</a></div>
+      </article>
 
       <article class="proj">
         <div class="proj-top"><p class="kicker">NBA front office · AI take-home</p><span class="go">Private</span></div>
