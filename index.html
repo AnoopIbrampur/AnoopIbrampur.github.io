@@ -129,6 +129,7 @@ a.proj:hover .go{color:var(--accent)}
 
 .links{display:flex;gap:8px;flex-wrap:wrap;margin-top:2px}
 .btn.sm{padding:7px 14px;font-size:.84rem}
+.links .hint{align-self:center;font-size:.78rem;color:var(--faint)}
 .go.live{display:inline-flex;align-items:center;gap:6px;color:var(--good)}
 /* More builds list */
 .more{margin-top:56px}
@@ -261,8 +262,8 @@ h2 em{font-style:italic;color:var(--accent)}
     </div>
 
     <div class="grid">
-      <a class="proj wide" href="https://github.com/WoosungLim01/StudyMatch" target="_blank" rel="noopener">
-        <div class="proj-top"><p class="kicker">Capstone · Optimization + ML</p><span class="go">Repo ↗</span></div>
+      <article class="proj wide">
+        <div class="proj-top"><p class="kicker">Capstone · Optimization + ML</p><span class="go live"><span class="dot" aria-hidden="true"></span>Live</span></div>
         <h3>StudyMatch</h3>
         <p>Places Penn State students into study groups of 4–5 from a short survey. A Gaussian mixture model finds study-style archetypes, then an integer program solved with OR-Tools CP-SAT assigns every student so that compatibility inside each group is as high as possible.</p>
         <ol class="flow" aria-label="StudyMatch pipeline">
@@ -271,8 +272,9 @@ h2 em{font-style:italic;color:var(--accent)}
           <li><span class="kicker">Step 3</span><b>Match</b><span>CP-SAT integer program, groups of 4–5</span></li>
           <li><span class="kicker">Step 4</span><b>Serve</b><span>FastAPI backend, vanilla JS frontend</span></li>
         </ol>
-        <p class="stackline">Python · scikit-learn · OR-Tools · FastAPI · team project, synthetic data only</p>
-      </a>
+        <p class="stackline">Python · scikit-learn · OR-Tools · FastAPI · team project</p>
+        <div class="links"><a class="btn primary sm" href="https://studymatch-8qih.onrender.com" target="_blank" rel="noopener">Open live app ↗</a><a class="btn line-btn sm" href="https://github.com/WoosungLim01/StudyMatch" target="_blank" rel="noopener">Code</a><span class="hint">Free hosting: may take ~30s to wake up</span></div>
+      </article>
 
       <a class="proj" href="https://github.com/vs-githjk/fish-market-nothing-fishy" target="_blank" rel="noopener">
         <div class="proj-top"><p class="kicker">Multi-agent · Hackathon</p><span class="go">Repo ↗</span></div>
