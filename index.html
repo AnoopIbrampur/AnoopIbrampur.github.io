@@ -111,7 +111,7 @@ h2{font:400 clamp(2.2rem,5vw,3.1rem)/1.05 var(--display);letter-spacing:-.02em;m
 a.proj:hover{text-decoration:none;transform:translateY(-3px);box-shadow:0 0 0 1px var(--hair),0 14px 40px rgba(0,0,0,.08)}
 a.proj:active{transform:scale(.99);transition-duration:.1s}
 .proj.wide{grid-column:1/-1}
-.proj-top{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.proj-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;align-items:baseline}
 .proj h3{margin:0;font:600 1.35rem/1.2 var(--sans);letter-spacing:-.02em}
 .proj p{margin:0;color:var(--muted);font-size:.98rem;line-height:1.55}
 .go{font:500 .72rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--faint);white-space:nowrap}
@@ -285,6 +285,15 @@ h2 em{font-style:italic;color:var(--accent)}
         <div class="links"><a class="btn primary sm" href="https://studymatch-8qih.onrender.com" target="_blank" rel="noopener">Open live app ↗</a><a class="btn line-btn sm" href="https://github.com/WoosungLim01/StudyMatch" target="_blank" rel="noopener">Code</a><span class="hint">Free hosting: may take ~30s to wake up</span></div>
       </article>
 
+      <article class="proj wide">
+        <div class="proj-top"><p class="kicker">Open source · Forecasting</p><span class="go live"><span class="dot" aria-hidden="true"></span>Live · updated weekly</span></div>
+        <h3>Internet Bus Factor</h3>
+        <p>How many people actually keep the most-used open-source packages alive? I read the full git history of about 9,000 repos behind the top 5,000 PyPI and top 5,000 npm packages, measured how few people carry each one, and built a failure simulator and a dependency checker on top. A forecast of which projects go quiet passed a test whose rules I committed before seeing any result, and each week's predictions are frozen in public and graded a year later. No maintainer names are published, and there is deliberately no 'weakest projects' list.</p>
+        <div class="pills"><span class="pill">Forecast ROC-AUC <b>0.87</b> vs <b>0.82</b> for the best simple rule</span><span class="pill"><b>4</b> pre-registered tests, every result published (3 passed, 1 didn't)</span><span class="pill"><b>~9,000</b> git histories, refreshed weekly for <b>$0</b></span></div>
+        <p class="stackline">Python · LightGBM · survival analysis · walk-forward backtest · GitHub Actions · solo project</p>
+        <div class="links"><a class="btn primary sm" href="https://anoopibrampur.github.io/bus-factor/" target="_blank" rel="noopener">Open the site ↗</a><a class="btn line-btn sm" href="https://github.com/AnoopIbrampur/bus-factor/blob/main/docs/case_study.md" target="_blank" rel="noopener">Case study</a><a class="btn line-btn sm" href="https://github.com/AnoopIbrampur/bus-factor" target="_blank" rel="noopener">Code</a></div>
+      </article>
+
       <article class="proj">
         <div class="proj-top"><p class="kicker">Multi-agent · Hackathon</p><span class="go live"><span class="dot" aria-hidden="true"></span>Live</span></div>
         <h3>Fish Market</h3>
@@ -301,13 +310,6 @@ h2 em{font-style:italic;color:var(--accent)}
         <div class="pills"><span class="pill"><b>75.6%</b> vs <b>54.4%</b> baseline, top-20 precision</span><span class="pill">Won <b>40 of 41</b> backtest days</span></div>
         <p class="stackline">Python · logistic regression · embeddings · Ollama · FastAPI</p>
         <div class="links"><a class="btn primary sm" href="https://anoopibrampur.github.io/trendcatcher/" target="_blank" rel="noopener">Open live demo ↗</a><a class="btn line-btn sm" href="https://github.com/AnoopIbrampur/trendcatcher" target="_blank" rel="noopener">Code</a></div>
-      </article>
-
-      <article class="proj">
-        <div class="proj-top"><p class="kicker">NBA front office · AI take-home</p><span class="go">Private</span></div>
-        <h3>Basketball RAG</h3>
-        <p>Answers questions over box scores, game recaps and injury notes by joining the stats tables with text retrieval. It cites every source row, abstains when the data can't answer, and reproduces the same output on every run with a small local model.</p>
-        <p class="stackline">PostgreSQL · pgvector · Ollama · Docker</p>
       </article>
 
       <a class="proj" href="https://github.com/AnoopIbrampur/gazeshift" target="_blank" rel="noopener">
@@ -344,6 +346,7 @@ h2 em{font-style:italic;color:var(--accent)}
         <li><a class="row" href="https://github.com/AnoopIbrampur/nsefactor" target="_blank" rel="noopener"><span class="row-name">nsefactor</span><span class="row-desc">Volatility forecasting for Indian equities on point-in-time data, reporting what didn't work.</span><span class="row-tag">Forecasting</span></a></li>
         <li><a class="row" href="https://anoopibrampur.github.io/covercast/" target="_blank" rel="noopener"><span class="row-name">covercast</span><span class="row-desc">Restaurant demand forecasting scored on labor cost instead of accuracy alone.</span><span class="row-tag">Live demo</span></a></li>
         <li><a class="row" href="https://github.com/AnoopIbrampur/scoutagent" target="_blank" rel="noopener"><span class="row-name">scoutagent</span><span class="row-desc">Search tool for overlooked NCAA basketball players, with fact-checked scouting reports.</span><span class="row-tag">Sports</span></a></li>
+        <li><div class="row"><span class="row-name">Basketball RAG</span><span class="row-desc">Stats-plus-text retrieval over box scores and recaps that cites every row and abstains when unsure. NBA AI take-home.</span><span class="row-tag">Private</span></div></li>
         <li><div class="row"><span class="row-name">Shot make probability</span><span class="row-desc">Shot-level model estimating the chance each attempt goes in, with a written report. NBA analyst take-home.</span><span class="row-tag">Private</span></div></li>
         <li><a class="row" href="https://github.com/AnoopIbrampur/music-war" target="_blank" rel="noopener"><span class="row-name">music-war</span><span class="row-desc">Wins Above Replacement for musicians: sparse ridge regression on 80k Spotify tracks.</span><span class="row-tag">Applied stats</span></a></li>
         <li><a class="row" href="https://anoopibrampur.github.io/hearsay/" target="_blank" rel="noopener"><span class="row-name">hearsay</span><span class="row-desc">Browser-native meeting notes with live transcription and speaker detection, in one HTML file.</span><span class="row-tag">Live demo</span></a></li>
