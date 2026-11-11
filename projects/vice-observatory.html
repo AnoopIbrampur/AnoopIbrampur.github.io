@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="Vice Observatory: a source-linked GTA VI attention study with verified daily snapshots, event investigations and reproducible retrospective benchmarks. A project by Anoop Ibrampur.">
+  <title>Vice Observatory — Anoop Ibrampur</title>
+  <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+<a class="skip" href="#project">Skip to case study</a>
+<nav aria-label="Project navigation"><div class="wrap"><a class="brand" href="../index.html">Anoop Ibrampur</a><a href="../index.html#work">All projects ↗</a></div></nav>
+<main id="project" class="wrap">
+  <header class="hero">
+    <p class="kicker">Data engineering / Interactive research / 2026</p>
+    <h1>Vice Observatory</h1>
+    <p class="lead">A cultural moment, observed one day at a time.</p>
+    <p class="intro">An independent GTA VI attention observatory built from public Wikipedia pageviews. Every event investigation pairs its chart with source evidence, explicit coverage limits and the snapshot behind the numbers.</p>
+    <div class="links"><a class="btn primary" href="https://vice-observatory-anoop.poeticskink11.chatgpt.site/?event=gta-vi-launch-trailer#investigation" target="_blank" rel="noopener">Investigate an event ↗</a><a class="btn" href="https://github.com/AnoopIbrampur/vice-observatory" target="_blank" rel="noopener">Source code</a></div>
+    <p class="credit">Independent portfolio project · AI-assisted implementation with Codex · No paid API keys</p>
+  </header>
+  <figure class="preview"><a href="https://vice-observatory-anoop.poeticskink11.chatgpt.site/?event=gta-vi-launch-trailer#investigation" target="_blank" rel="noopener" aria-label="Open the launch-trailer event investigation"><img src="../assets/vice-observatory.jpg" width="1440" height="1000" alt="The launch-trailer investigation shows before and after means, a daily attention chart and publisher evidence."></a><figcaption>One event, its surrounding signal, and the evidence needed to interpret it.</figcaption></figure>
+  <section aria-labelledby="question"><p class="kicker">The problem</p><h2 id="question">Attention is easy to overclaim.</h2><p>How did article traffic change around a trailer or announcement? How does a launch window compare with other releases? Answering those questions takes more than a chart: the dates need sources, incomplete windows must stay unavailable, and every displayed result needs a reproducible input.</p><p>This project measures English Wikipedia article pageviews. It does not measure sales, unique readers, players or sentiment. Event timing supports descriptive comparisons, not causal conclusions.</p></section>
+  <section aria-labelledby="system"><p class="kicker">Architecture</p><h2 id="system">From public evidence to a verified view.</h2><p>The collector, analysis and interface share a snapshot contract. The browser checks the data and analysis identities before it renders.</p>
+    <ol class="architecture" aria-label="Four-stage data architecture">
+      <li><span class="step">01 / Acquire</span><h3>Public sources</h3><p>Python + curl collect Wikimedia pageviews. Publisher references identify events; a MediaWiki audit exposes title and redirect limits.</p></li>
+      <li><span class="step">02 / Preserve</span><h3>Immutable snapshots</h3><p>Exact responses, acquisition receipts and SHA-256 hashes retain the evidence. Invalid or incomplete inputs fail validation.</p></li>
+      <li><span class="step">03 / Analyze</span><h3>Fixed comparisons</h3><p>One protocol defines before/after windows, release alignment and past-only baseline predictions. Nulls stay distinct from zero.</p></li>
+      <li><span class="step">04 / Present</span><h3>Browser verification</h3><p>A single publication checkpoint binds data, analysis and audit evidence. Vanilla JavaScript renders charts, tables and shareable investigations.</p></li>
+    </ol>
+    <div class="operations"><h3>Daily publication, with a last-good fallback</h3><p>GitHub Actions refreshes in an isolated candidate, runs the checks, commits the results and deploys to GitHub Pages. The public demo reads that publication. Failed acquisition retains the last verified data; an unavailable or corrupt publication triggers a visibly labeled bundled fallback.</p><a href="https://github.com/AnoopIbrampur/vice-observatory/actions/workflows/publish.yml" target="_blank" rel="noopener">Inspect the publication workflow ↗</a></div>
+  </section>
+  <section aria-labelledby="decisions"><p class="kicker">Engineering decisions</p><h2 id="decisions">Keep the evidence inspectable.</h2><dl class="decisions">
+    <div><dt>Why exact article titles?</dt><dd>Redirects and renamed articles can change what a historical series measures. The audit shows those limitations. Alias traffic is not silently summed or described as unique readers.</dd></div>
+    <div><dt>Why two simple predictors?</dt><dd>Yesterday’s count and the preceding week’s mean are useful, reproducible baselines. Both see only observations before the target day and are scored on the same dates.</dd></div>
+    <div><dt>Why a fixed before/after window?</dt><dd>Seven complete days before an event are compared with event day through day +6. A missing day, incomplete window or zero denominator can make the change unavailable. The chart provides 14 days of context on either side without changing that rule.</dd></div>
+    <div><dt>Why a static frontend?</dt><dd>A dependency-free interface keeps the public demo portable. Data updates happen in the publication pipeline, while browser-side hashes catch mismatched or damaged snapshots.</dd></div>
+  </dl></section>
+  <section aria-labelledby="results"><p class="kicker">Results and limits</p><h2 id="results">The baseline remains worth keeping.</h2>
+    <div class="stats"><div><strong>20</strong><span>Article series</span></div><div><strong>855</strong><span>Historical target days</span></div><div><strong>26</strong><span>Sourced events</span></div><div><strong>0</strong><span>Paid API keys</span></div></div>
+    <p>At the November 11, 2026 expansion checkpoint, yesterday’s count had lower full-window MAE than the trailing-week mean in all 19 historical release windows. Equal-game WAPE was <strong>19.5%</strong> versus <strong>42.4%</strong>. WAPE is an error ratio; lower is better. The weekly mean still performed better in GTA V’s three-day re-release window.</p>
+    <p>This is a purposive, retrospective cohort. It does not establish performance on unseen launches or provide a prospective GTA VI forecast. The original-release and re-release scores remain separate, and the full findings preserve the exceptions.</p>
+    <p>Verification covers failure retention, snapshot matching, date completeness and calendar gaps, plus keyboard and mobile browser checks. An early cross-version replay failure exposed a floating-point summation difference; accurate summation now keeps the analysis reproducible across Python 3.11 and 3.13.</p>
+    <div class="links"><a class="btn" href="https://github.com/AnoopIbrampur/vice-observatory/blob/main/docs/FINDINGS.md" target="_blank" rel="noopener">Read the findings</a><a class="btn" href="https://github.com/AnoopIbrampur/vice-observatory/blob/main/docs/ANALYSIS_PROTOCOL.md" target="_blank" rel="noopener">Analysis protocol</a><a class="btn" href="https://github.com/AnoopIbrampur/vice-observatory/actions/workflows/ci.yml" target="_blank" rel="noopener">CI checks</a></div>
+  </section>
+  <section aria-labelledby="stack"><p class="kicker">Stack</p><h2 id="stack">Small runtime. Inspectable system.</h2><p>Python standard library · curl · JavaScript ES modules · SVG · HTML/CSS · Node test runner · GitHub Actions · GitHub Pages · Sites</p><div class="links"><a class="btn primary" href="https://vice-observatory-anoop.poeticskink11.chatgpt.site/?event=gta-vi-launch-trailer#investigation" target="_blank" rel="noopener">Open the live investigation ↗</a><a class="btn" href="../index.html#work">Back to selected work</a></div></section>
+</main>
+<footer class="wrap"><p>A project by <a href="../index.html">Anoop Ibrampur</a>. Unaffiliated with Rockstar Games or Wikimedia. Wikimedia pageview data: CC0 1.0. Code: MIT.</p></footer>
+</body></html>

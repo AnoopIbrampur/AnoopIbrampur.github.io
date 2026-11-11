@@ -131,6 +131,7 @@ a.proj:hover .go{color:var(--accent)}
 .btn.sm{padding:7px 14px;font-size:.84rem}
 .links .hint{align-self:center;font-size:.78rem;color:var(--faint)}
 .go.live{display:inline-flex;align-items:center;gap:6px;color:var(--good)}
+.vice-preview{display:block;margin:4px 0;border-radius:12px;overflow:hidden;aspect-ratio:1440/850;background:#101519;box-shadow:0 0 0 1px var(--hair)}.vice-preview img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}.vice-preview:focus-visible{outline-offset:5px}.vice-project .links{margin-top:4px}.vice-project{scroll-margin-top:76px}
 /* More builds list */
 .more{margin-top:56px}
 .more .kicker{margin-bottom:8px}
@@ -262,6 +263,16 @@ h2 em{font-style:italic;color:var(--accent)}
     </div>
 
     <div class="grid">
+      <article class="proj wide vice-project" id="vice-observatory">
+        <div class="proj-top"><p class="kicker">Data engineering · Interactive research</p><span class="go live"><span class="dot" aria-hidden="true"></span>Live · daily publication</span></div>
+        <h3>Vice Observatory</h3>
+        <p>A GTA VI attention observatory that turns public Wikipedia pageviews into source-linked event investigations. Open a trailer or announcement to inspect the surrounding chart, complete before/after windows and evidence. Historical comparisons cover 19 releases; both prediction baselines use only preceding observations.</p>
+        <a class="vice-preview" href="https://vice-observatory-anoop.poeticskink11.chatgpt.site/?event=gta-vi-launch-trailer#investigation" target="_blank" rel="noopener" aria-label="Open Vice Observatory’s launch-trailer investigation"><img src="./assets/vice-observatory.jpg" width="1440" height="1000" loading="lazy" alt="Vice Observatory event investigation with daily article pageviews, seven-day before and after means, and source evidence."></a>
+        <div class="pills"><span class="pill"><b>20</b> article series</span><span class="pill"><b>855</b> retrospective prediction targets</span><span class="pill">Checksummed daily snapshots</span><span class="pill">No paid APIs</span></div>
+        <p class="stackline">Python · JavaScript · GitHub Actions / Pages · AI-assisted implementation with Codex</p>
+        <div class="links"><a class="btn primary sm" href="https://vice-observatory-anoop.poeticskink11.chatgpt.site/?event=gta-vi-launch-trailer#investigation" target="_blank" rel="noopener">Investigate an event ↗</a><a class="btn line-btn sm" href="./projects/vice-observatory.html">Case study &amp; architecture</a><a class="btn line-btn sm" href="https://github.com/AnoopIbrampur/vice-observatory" target="_blank" rel="noopener">Code</a></div>
+      </article>
+
       <article class="proj wide">
         <div class="proj-top"><p class="kicker">Forecasting · Public health data</p><span class="go live"><span class="dot" aria-hidden="true"></span>Live · updated nightly</span></div>
         <h3>DrugSupply Watch</h3>
